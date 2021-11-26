@@ -9,10 +9,13 @@
 #include "Game.h"
 #include "SDL/SDL_image.h"
 #include <algorithm>
+#include <string>
 #include "Actor.h"
 #include "SpriteComponent.h"
 #include "Ship.h"
+#include "Character.hpp"
 #include "BGSpriteComponent.h"
+#include "TileMapComponent.hpp"
 
 Game::Game()
 :mWindow(nullptr)
@@ -89,6 +92,7 @@ void Game::ProcessInput()
 
 	// Process ship input
 	mShip->ProcessKeyboard(state);
+    mCharacter->ProcessKeyboard(state);
 }
 
 void Game::UpdateGame()
@@ -158,6 +162,10 @@ void Game::LoadData()
 	mShip->SetPosition(Vector2(100.0f, 384.0f));
 	mShip->SetScale(1.5f);
 
+    mCharacter = new Character(this);
+    mCharacter->SetPosition(Vector2(100.0f, 384.0f));
+    mCharacter->SetScale(1.5f);
+
 	// Create actor for the background (this doesn't need a subclass)
 	Actor* temp = new Actor(this);
 	temp->SetPosition(Vector2(512.0f, 384.0f));
@@ -179,6 +187,18 @@ void Game::LoadData()
 	};
 	bg->SetBGTextures(bgtexs);
 	bg->SetScrollSpeed(-200.0f);
+
+    TileMapComponent *tileMap = new TileMapComponent(temp, "Assets/MapLayer1.csv", 13);
+    tileMap->SetTexture(GetTexture("Assets/Tiles.png"));
+    tileMap->SetScreenSize(Vector2(1024.0f, 768.0f));
+
+    tileMap = new TileMapComponent(temp, "Assets/MapLayer2.csv", 12);
+    tileMap->SetTexture(GetTexture("Assets/Tiles.png"));
+    tileMap->SetScreenSize(Vector2(1024.0f, 768.0f));
+
+    tileMap = new TileMapComponent(temp, "Assets/MapLayer3.csv", 11);
+    tileMap->SetTexture(GetTexture("Assets/Tiles.png"));
+    tileMap->SetScreenSize(Vector2(1024.0f, 768.0f));
 }
 
 void Game::UnloadData()

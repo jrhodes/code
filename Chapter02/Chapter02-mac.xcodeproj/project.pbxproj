@@ -18,6 +18,9 @@
 		9223C4801F009428009A94D7 /* SpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9223C4761F009428009A94D7 /* SpriteComponent.cpp */; };
 		92D324FB1B697389005A86C7 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D324FA1B697389005A86C7 /* CoreFoundation.framework */; };
 		92E46E941B6353E50035CD21 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E46E931B6353E50035CD21 /* OpenGL.framework */; };
+		D8CA45C5274D9B5500E446AA /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CA45C3274D9B5500E446AA /* Character.cpp */; };
+		D8CA45C8274F063600E446AA /* TileMapComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CA45C6274F063600E446AA /* TileMapComponent.cpp */; };
+		D8CA45CB275038FF00E446AA /* CSVReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D8CA45C9275038FF00E446AA /* CSVReader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,12 @@
 		92D324FA1B697389005A86C7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		92E46DF71B634EA30035CD21 /* Game-mac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Game-mac"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92E46E931B6353E50035CD21 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		D8CA45C3274D9B5500E446AA /* Character.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
+		D8CA45C4274D9B5500E446AA /* Character.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Character.hpp; sourceTree = "<group>"; };
+		D8CA45C6274F063600E446AA /* TileMapComponent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TileMapComponent.cpp; sourceTree = "<group>"; };
+		D8CA45C7274F063600E446AA /* TileMapComponent.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TileMapComponent.hpp; sourceTree = "<group>"; };
+		D8CA45C9275038FF00E446AA /* CSVReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVReader.cpp; sourceTree = "<group>"; };
+		D8CA45CA275038FF00E446AA /* CSVReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVReader.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +68,12 @@
 		92E46DEE1B634EA30035CD21 = {
 			isa = PBXGroup;
 			children = (
+				D8CA45C9275038FF00E446AA /* CSVReader.cpp */,
+				D8CA45CA275038FF00E446AA /* CSVReader.hpp */,
+				D8CA45C6274F063600E446AA /* TileMapComponent.cpp */,
+				D8CA45C7274F063600E446AA /* TileMapComponent.hpp */,
+				D8CA45C3274D9B5500E446AA /* Character.cpp */,
+				D8CA45C4274D9B5500E446AA /* Character.hpp */,
 				9223C4681F009428009A94D7 /* Actor.cpp */,
 				9223C4691F009428009A94D7 /* Actor.h */,
 				9223C46A1F009428009A94D7 /* AnimSpriteComponent.cpp */,
@@ -129,6 +144,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 92E46DEE1B634EA30035CD21;
@@ -165,10 +181,13 @@
 				9223C47D1F009428009A94D7 /* Main.cpp in Sources */,
 				9223C47E1F009428009A94D7 /* Math.cpp in Sources */,
 				9223C47A1F009428009A94D7 /* AnimSpriteComponent.cpp in Sources */,
+				D8CA45C5274D9B5500E446AA /* Character.cpp in Sources */,
 				9223C47B1F009428009A94D7 /* BGSpriteComponent.cpp in Sources */,
 				9223C4781F009428009A94D7 /* Game.cpp in Sources */,
 				9223C4801F009428009A94D7 /* SpriteComponent.cpp in Sources */,
+				D8CA45C8274F063600E446AA /* TileMapComponent.cpp in Sources */,
 				9223C47F1F009428009A94D7 /* Ship.cpp in Sources */,
+				D8CA45CB275038FF00E446AA /* CSVReader.cpp in Sources */,
 				9223C4791F009428009A94D7 /* Actor.cpp in Sources */,
 				9223C47C1F009428009A94D7 /* Component.cpp in Sources */,
 			);
